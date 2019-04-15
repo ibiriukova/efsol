@@ -48,7 +48,7 @@ namespace Calculator
                     }
                     catch (FormatException)
                     {
-                        Console.WriteLine("Введите число в 16й системе счисления!");
+                        Console.WriteLine("Ошибка ввода");
                     }
                 }
                 else if (CRK.Key == ConsoleKey.NumPad3)
@@ -60,11 +60,11 @@ namespace Calculator
                         Console.WriteLine("Введите второе число");
                         int b = Convert.ToInt32(Console.ReadLine());
                         U.proizv(a, b);                        
-                        Console.WriteLine("НАЖМИТЕ [1] для сложения   НАЖМИТЕ [2] для вычитания");
+                        Console.WriteLine("НАЖМИТЕ [1] для сложения   НАЖМИТЕ [2] для вычитания" + "\r\n" + "НАЖМИТЕ [3] для умножения");
                     }
                     catch (FormatException)
                     {
-                        Console.WriteLine("Введите число в 16й системе счисления!");
+                        Console.WriteLine("Ошибка ввода");
                     }
                 }
                 else if (CRK.Key == ConsoleKey.Escape) { break; }
