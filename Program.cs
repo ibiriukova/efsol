@@ -81,7 +81,7 @@ namespace Calculator
             public string s2;
             public int rezult;
             
-            public string rasschet(int a, int b)
+            public string rasschet(int a, int b) //выровнять числа по правому краю
             {
                 int raznica = 0;
                 s = a.ToString();
@@ -103,7 +103,7 @@ namespace Calculator
 
         }
 
-        public class Sum : Rasschet
+        public class Sum : Rasschet  //найти сумму
         {            
             public void sum(int a, int b)
             {
@@ -116,7 +116,7 @@ namespace Calculator
                 Console.WriteLine(" " + s + "\r\n+\r\n" + " " + s2 + "\r\n" + "__________\r\n" + " " + rezult);
             }
         }
-        public class Raznost : Rasschet
+        public class Raznost : Rasschet //найти разность
         {
             public void raz(int a, int b)
             {
@@ -138,7 +138,7 @@ namespace Calculator
             string probel_nachalo;
             string result;
             int length;
-            public string umnozhenie(int a, int b)
+            public string umnozhenie(int a, int b) //поиск и вывод промежуточных значений
             {
                 s = a.ToString();
                 s2 = b.ToString();
@@ -157,7 +157,7 @@ namespace Calculator
 
 
             }
-            public void proizv(int a, int b)
+            public void proizv(int a, int b) // вывод всего результата умножения
             {
                 raznica= (a * b).ToString().Length;
 
@@ -183,11 +183,11 @@ public class Delenie //деление не доделано. только нар
                 string ostatok = "";
                 string new_delimoe = "";
 
-                for (int i = 0; i < (chastnoe.ToString()).Length; i++)
+                for (int i = 0; i < (chastnoe.ToString()).Length; i++) //проходимся по каждой цифре частного
                 {
                     c = (chastnoe.ToString()[i]).ToString();
-                    chislo = delitel * Convert.ToInt32(c);
-                    Console.WriteLine(chislo + "\r\n");//берем цифру частного и умножаем на делитель
+                    chislo = delitel * Convert.ToInt32(c);//берем цифру частного и умножаем на делитель
+                    Console.WriteLine(chislo + "\r\n");
                     int n = (chislo.ToString()).Length - ostatok.Length;
                     for (int j = 0; j < n; j++)
                     {
