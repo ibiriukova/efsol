@@ -170,7 +170,41 @@ namespace Calculator
             }
 }
 
+public class Delenie //деление не доделано. только наработки
+        {
+            public static void Delenie(int a, int b)
+            {
+                string delimoe = a.ToString();
+                string c;
+                int delitel = b;
+                int chastnoe = a / b;
+                int chislo;
 
+                string ostatok = "";
+                string new_delimoe = "";
+
+                for (int i = 0; i < (chastnoe.ToString()).Length; i++)
+                {
+                    c = (chastnoe.ToString()[i]).ToString();
+                    chislo = delitel * Convert.ToInt32(c);
+                    Console.WriteLine(chislo + "\r\n");//берем цифру частного и умножаем на делитель
+                    int n = (chislo.ToString()).Length - ostatok.Length;
+                    for (int j = 0; j < n; j++)
+                    {
+                        new_delimoe += (delimoe[j]).ToString(); //берем необходимое кол-во цифр из делимого для вычитания chislo
+                    }
+                    ostatok = (Convert.ToInt32(new_delimoe) - chislo).ToString();  //находим остаток
+                    Console.WriteLine(new_delimoe + "\r\n");
+                    new_delimoe = "";
+                    for (int k = ((chislo.ToString()).Length + 1); k <= delimoe.Length; k++)
+                    {
+                        new_delimoe += (delimoe[k]).ToString();  //убираем цифры в начале делимого
+                    }
+                    delimoe = new_delimoe;
+                    new_delimoe = ostatok;
+                }
+            }
+        }
 
 
     }
